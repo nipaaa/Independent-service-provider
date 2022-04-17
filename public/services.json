@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "BW PHOTOSHOOT",
+        "price": "59",
+        "description": "This is on Location Photography, full day photoshoot, 40 High Resolution Images Commercial License, Weekend Sessions( + $150 Extra )",
+        "img": "images/services-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "BABY PHOTOSHOOTS",
+        "price": "100",
+        "description": "This is on Location Photography, full day photoshoot, 40 High Resolution Images Commercial License, Weekend Sessions( + $150 Extra )",
+        "img": "images/services-2.png"
+    },
+    {
+        "id": 3,
+        "name": "VIDEO PHOTOSHOOTS",
+        "price": "150",
+        "description": "This is on Location Photography, full day photoshoot, 40 High Resolution Images Commercial License, Weekend Sessions( + $150 Extra )",
+        "img": "images/services-3.jpg"
+    }
+]

@@ -1,25 +1,27 @@
-
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import Services from './pages/Services/Services';
-import Blog from './pages/Blog/Blog';
+
+
 import About from './pages/About/About';
 import Header from './shared/Header/Header';
 import Footer from './shared/Footer/Footer';
-import SignUp from './pages/SignUp/SignUp';
-import Login from './pages/Login/Login';
-import NotFound from './pages/NotFound/NotFound';
+import NotFound from './shared/NotFound/NotFound';
+import Home from './pages/Home/Home/Home';
+import Services from './pages/Home/Services/Services';
+import SignUp from './pages/Login/SignUp/SignUp';
+import Login from './pages/Login/Login/Login';
+import Blogs from './pages/Blogs/Blogs/Blogs';
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

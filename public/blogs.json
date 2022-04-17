@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "Question": "Difference between authorization and authentication",
+        "Ans": "Authentication confirms your identity to grant access to the system.Authorization determines whether you are authorized to access the resources.It is the process of validating user credentials to gain user access.It is the process of verifying whether access is allowed or not.It determines whether user is what he claims to be.It determines what user can and cannot access.Authentication usually requires a username and a password.Authentication factors required for authorization may vary,depending on the security level.Authentication is the first step of authorization so always comes first.Authorization is done after successful authentication."
+    },
+    {
+        "id": 2,
+        "Question": "Why are you using firebase? What other options do you have to implement authentication?",
+        "Ans": "Google Firebase is a Google-backed application development software that enables developers to develop iOS, Android and Web apps. Firebase provides tools for tracking analytics, reporting and fixing app crashes, creating marketing and product experiment.There are many more platforms to implement authentication like Auth0, PingIdentity, Okta, Keycloak, Frontegg, OneLogin, Ory etc."
+    },
+    {
+        "id": 3,
+        "Question": "What other services does firebase provide other than authentication",
+        "Ans": "There are many services which Firebase provides, Most useful of them are: hosting, cloud functions, cloud messsging, predictions, google analytics, cloud storage, remote config etc. Firebase is a full package that can help in developing your mobile or web applications faster with fewer resources and more efficiency. Now, let’s look at some of the services and use of it. "
+    }
+]
