@@ -10,11 +10,11 @@ const Services = () => {
         .then(data => setServices(data))
     },[])
     return (
-        <div>
+        <div id="services">
             <CardGroup>
             {
                 services.map(service=> <Service
-                id={service.id}
+                key={service.id}
                 service={service}
                 ></Service>)
             }

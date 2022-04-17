@@ -1,28 +1,57 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const SignUp = () => {
+    const nameRef = useRef('');
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate()
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
+   
     const handleSubmit = event => {
         event.preventDefault();
+        const name = nameRef.current.value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+
+        createUserWithEmailAndPassword(email, password);
     }
+
+    const navigateLogin = event => {
+        navigate('/login')
+    }
+
+    if(user){
+        navigate('/home');
+    }
+
     return (
         <div className='w-50 mx-auto'>
         <h2 className='text-warning text-center mt-2'>Please Sign Up</h2>
       <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3" controlId="">
               <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter Your Name" required />
+              <Form.Control ref={nameRef} type="text" placeholder="Enter Your Name" required />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" required />
+              <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" required />
+              <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
@@ -31,7 +60,7 @@ const SignUp = () => {
               Submit
           </Button>
       </Form>
-      <p>Already have an account? <Link to="/signup" className='text-danger pe-auto text-decoration-none' >Please Login</Link> </p>
+      <p>Already have an account? <Link to="/signup" onClick={navigateLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link> </p>
       
   </div>
     );

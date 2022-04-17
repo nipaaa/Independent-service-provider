@@ -11,6 +11,8 @@ import Services from './pages/Home/Services/Services';
 import SignUp from './pages/Login/SignUp/SignUp';
 import Login from './pages/Login/Login/Login';
 import Blogs from './pages/Blogs/Blogs/Blogs';
+import Checkout from './pages/Checkout/Checkout';
+import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 
 
 function App() {
@@ -21,6 +23,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
+        <Route path='/services/:checkoutId' element={
+          <RequireAuth>
+            <Checkout></Checkout>
+          </RequireAuth>
+        }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>

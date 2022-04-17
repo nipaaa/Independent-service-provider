@@ -1,25 +1,29 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Service = (props) => {
-    const {name,price,description,img} = props.service;
-    return (
-        <div>
-             <Card>
-    <Card.Img className='img-fluid' variant="top" src={img} />
-    <Card.Body>
-      <Card.Title>{name}</Card.Title>
-      <h2><small>$</small>{price}</h2>
-      <Card.Text>
-        {description}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-    <Button variant="warning">Warning</Button>{' '}
-    </Card.Footer>
-  </Card>
-        </div>
-    );
+  const { id,name, price, description, img } = props.service;
+
+  const navigate = useNavigate();
+
+  const navigateToCheckout = id =>{
+      navigate(`/services/${id}`)
+  }
+
+  return (
+    <Card className="m-2 p-3">
+          <Card.Img variant="top" src={img} />
+          <Card.Body>
+            <Card.Title>{name}</Card.Title>
+            <Card.Title><sup>$</sup>{price}</Card.Title>
+            <Card.Text>{description}</Card.Text>
+            <Button as={Link} to="/checkout" onClick={()=> navigateToCheckout(id)} variant="warning">Checkout</Button>
+          </Card.Body>
+           
+        </Card>
+
+  );
 };
 
 export default Service;
