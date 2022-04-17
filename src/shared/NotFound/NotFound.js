@@ -3,7 +3,7 @@ import React from 'react';
 const NotFound = () => {
     return (
         <div>
-          404  
+          <img className='w-100' src="images/error.gif" alt="" />
         </div>
     );
 };

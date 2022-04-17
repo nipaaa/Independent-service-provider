@@ -6,7 +6,7 @@ const Service = (props) => {
     return (
         <div>
              <Card>
-    <Card.Img className='w-50' variant="top" height={200} src={img} />
+    <Card.Img className='img-fluid' variant="top" src={img} />
     <Card.Body>
       <Card.Title>{name}</Card.Title>
       <h2><small>$</small>{price}</h2>
