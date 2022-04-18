@@ -14,17 +14,17 @@ const WhyChoose = () => {
         <h2 className='fw-bolder text-white'>Our Achievements</h2>
         <div className="card-text mt-5 container d-flex justify-content-between align-items-center">
             <div>
-                <h2><i class="fa-solid fa-star"></i></h2>
+                <h2><i className="fa-solid fa-star"></i></h2>
                 <h1>500</h1>
                 <h4>CUSTOMERS</h4>
             </div>
             <div>
-                <h2><i class="fa-solid fa-heart"></i></h2>
+                <h2><i className="fa-solid fa-heart"></i></h2>
                 <h1>170</h1>
                 <h4>PHOTOSHOOTS</h4>
             </div>
             <div>
-                <h2><i class="fa-solid fa-images"></i></h2>
+                <h2><i className="fa-solid fa-images"></i></h2>
                 <h1>2,570<sup>+</sup></h1>
                 <h4>PHOTOS</h4>
             </div>
