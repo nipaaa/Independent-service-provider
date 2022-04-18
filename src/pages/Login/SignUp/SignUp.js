@@ -9,7 +9,8 @@ const SignUp = () => {
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
 
     const [
         createUserWithEmailAndPassword,
@@ -38,10 +39,6 @@ const SignUp = () => {
     const navigateLogin = () => {
         navigate('/login')
     }
-
-    // if(user){
-    //     navigate('/home');
-    // }
 
     return (
         <div className='w-50 mx-auto mb-5'>
