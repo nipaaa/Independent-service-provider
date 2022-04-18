@@ -18,7 +18,7 @@ const Service = (props) => {
             <Card.Title>{name}</Card.Title>
             <Card.Title><sup>$</sup>{price}</Card.Title>
             <Card.Text>{description}</Card.Text>
-            <Button as={Link} to="/checkout" onClick={()=> navigateToCheckout(id)} variant="warning">Checkout</Button>
+            <Button onClick={()=> navigateToCheckout(id)} variant="warning">Checkout</Button>
           </Card.Body>
            
         </Card>

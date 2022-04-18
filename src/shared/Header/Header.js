@@ -27,12 +27,16 @@ const Header = () => {
     <Nav>
       {
         user? 
-        <Button as={Link} to="/checkout" onClick={handleSignOut} variant="warning">Sign Out</Button>
+        <Nav.Link as={Link} to="/" onClick={handleSignOut}>Sign Out</Nav.Link>
         :
-        <Nav.Link as={Link} to="/login">Log In</Nav.Link>
+        <div className='d-lg-flex'>
+           <Nav.Link as={Link} to="/login">Log In</Nav.Link>
+           <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>  
+        </div>
+       
       }
    
-    <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
+    
     </Nav>
   </Navbar.Collapse>
   </Container>
