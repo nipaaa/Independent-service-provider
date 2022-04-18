@@ -1,6 +1,7 @@
 # This is a React Project
 
-This project is an individual provide services site named 'Babies Island'. It is a photographer website.[Live Link](https://cookie-store-analysis.netlify.app/).
+This project is an individual provide services site named 'Babies Island'. It is a photographer website.
+[Live Link](https://independent-service-prov-8c99d.web.app).
 
 ## About this Project
 

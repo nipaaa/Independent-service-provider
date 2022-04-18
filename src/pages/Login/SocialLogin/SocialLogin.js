@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Spinner } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -9,13 +9,15 @@ const SocialLogin = () => {
     const navigate = useNavigate();
     let errorMessage;
 
-    if (error) {
-       
+    if (error) { 
         errorMessage = <div>
             <p className='text-danger'>Error: {error.message}</p>
           </div>
      
       }
+      if(loading){
+        return <Spinner animation="grow" variant="dark" />;
+    }
 
       if (user) {
           navigate('/home')

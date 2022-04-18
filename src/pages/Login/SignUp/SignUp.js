@@ -3,6 +3,7 @@ import { Button, Form, Spinner } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignUp = () => {
     const nameRef = useRef('');
@@ -43,7 +44,7 @@ const SignUp = () => {
     // }
 
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto mb-5'>
         <h2 className='text-warning text-center mt-2'>Please Sign Up</h2>
       <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="">
@@ -62,6 +63,8 @@ const SignUp = () => {
           </Button>
       </Form>
       <p>Already have an account? <Link to="/login" onClick={navigateLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link> </p>
+
+      <SocialLogin></SocialLogin>
       
   </div>
     );

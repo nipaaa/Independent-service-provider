@@ -19,8 +19,17 @@ const Login = () => {
         signInWithEmailAndPassword,
         user,
         loading,
-        error,
+        error1,
       ] = useSignInWithEmailAndPassword(auth);
+      let errorMessage;
+
+    if (error1) {
+       
+        errorMessage = <div>
+            <p className='text-danger'>Error: {error1?.message}</p>
+          </div>
+     
+      }
       
       const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
@@ -72,9 +81,10 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
+          
             <p>New to this site? <Link to="/signup" onClick={navigateSignUp} className='text-danger pe-auto text-decoration-none' >Please Sign Up</Link> </p>
             <p>Forget Password?<button className='btn btn-link text-success pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
-
+            {errorMessage}
             <SocialLogin></SocialLogin>
             <ToastContainer />
             
