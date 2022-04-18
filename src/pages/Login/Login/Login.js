@@ -23,15 +23,16 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
       let errorMessage;
 
-    if (error1) {
+      
+      const [sendPasswordResetEmail, sending , resetError] = useSendPasswordResetEmail(auth);
+      
+      if (error1) {
        
         errorMessage = <div>
-            <p className='text-danger'>Error: {error1?.message}</p>
+            <p className='text-danger'>Error: {error1?.message}{resetError?.message}</p>
           </div>
      
       }
-      
-      const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
       if (loading || sending) {
         return  <Spinner animation="border" variant="warning" />
