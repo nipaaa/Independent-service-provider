@@ -58,10 +58,10 @@ const SignUp = () => {
               <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
           </Form.Group>
           <Button variant="warning" type="submit">
-              Submit
+              Sign Up
           </Button>
       </Form>
-      <p>Already have an account? <Link to="/signup" onClick={navigateLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link> </p>
+      <p>Already have an account? <Link to="/login" onClick={navigateLogin} className='text-danger pe-auto text-decoration-none' >Please Login</Link> </p>
       
   </div>
     );

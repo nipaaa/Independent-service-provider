@@ -69,11 +69,11 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Button className='mb-3' variant="warning" type="submit">
-                    Submit
+                    Login
                 </Button>
             </Form>
             <p>New to this site? <Link to="/signup" onClick={navigateSignUp} className='text-danger pe-auto text-decoration-none' >Please Sign Up</Link> </p>
-            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <p>Forget Password?<button className='btn btn-link text-success pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
 
             <SocialLogin></SocialLogin>
             <ToastContainer />
