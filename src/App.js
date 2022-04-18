@@ -12,6 +12,7 @@ import SignUp from './pages/Login/SignUp/SignUp';
 import Login from './pages/Login/Login/Login';
 import Blogs from './pages/Blogs/Blogs/Blogs';
 import Checkout from './pages/Checkout/Checkout';
+import WhyChoose from './pages/Home/WhyChoose/WhyChoose';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/whyChoose' element={<WhyChoose></WhyChoose>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

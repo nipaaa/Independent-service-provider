@@ -35,7 +35,7 @@ const SignUp = () => {
        navigate('/home');
     }
 
-    const navigateLogin = event => {
+    const navigateLogin = () => {
         navigate('/login')
     }
 

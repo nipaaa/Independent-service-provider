@@ -16,7 +16,7 @@ const SocialLogin = () => {
      
       }
       if(loading){
-        return <Spinner animation="grow" variant="dark" />;
+        return <Spinner animation="border" variant="warning" />
     }
 
       if (user) {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhyChoose = () => {
     return (
-        <div>
+        <div id="whyChoose">
             <div className="card mt-5 w-100" >
   <div className="row g-0">
     <div className="col-lg-6 col-sm-12">
