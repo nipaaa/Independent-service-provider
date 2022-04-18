@@ -6,7 +6,7 @@ const Checkout = () => {
     const {checkoutId} = useParams();
     return (
         <div className='w-50 mx-auto my-5'>
-        <h2 className='text-warning text-center mt-2'>Please Sign Up</h2>
+        <h2 className='text-warning text-center mt-2'>Checkout The Information Again Before Booking</h2>
       <Form>
       <Form.Group className="mb-3" controlId="">
               <Form.Control type="text" placeholder="Enter Your Name" required />
